@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4efe6;
+  --color-paper-2: #ebe4d8;
+  --color-ink: #1c1916;
+  --color-ink-soft: #3a342e;
+  --color-muted: #6b645c;
+  --color-faint: #8a8278;
+  --color-rule: #d4cdc2;
+  --color-forest: #3d5a4c;
+  --color-forest-deep: #2a4036;
+  --color-forest-fg: #f4efe6;
+  --color-card: #ece6db;
+  --color-quote: #31483d;
+
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --font-serif: "Source Serif 4", "Iowan Old Style", Palatino, Georgia, serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+
+  --shadow-border: 0 0 0 1px rgb(28 25 22 / 0.08), 0 1px 2px -1px rgb(28 25 22 / 0.06),
+    0 8px 24px -12px rgb(28 25 22 / 0.12);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-forest) 28%, var(--color-paper));
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.35rem;
+  line-height: 0.78;
+  font-weight: 500;
+  padding-right: 0.55rem;
+  padding-top: 0.22rem;
+  color: var(--color-forest);
+}
+
+.cite {
+  display: inline;
+  font-family: var(--font-serif);
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 0;
+  position: relative;
+  top: -0.35em;
+  margin-left: 0.12em;
+  color: var(--color-forest);
+  text-decoration: none;
+  padding: 0.35rem 0.1rem;
+}
+
+.cite:hover,
+.cite:focus-visible {
+  color: var(--color-forest-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-prose p + p {
+  margin-top: 1.35em;
+}
+
+.article-prose h2 {
+  font-family: var(--font-display);
+  font-weight: 550;
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 2.75rem;
+  margin-bottom: 0.9rem;
+  color: var(--color-ink);
+}
+
+.article-prose a.inline-link {
+  color: var(--color-forest-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--color-forest) 45%, transparent);
+}
+
+.article-prose a.inline-link:hover {
+  text-decoration-color: var(--color-forest);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
