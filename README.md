@@ -6,11 +6,11 @@ The piece does not argue that every parent should make the same choice, or that 
 
 ## Live
 
-- **Public site (Vercel):** linked after production deploy
-- **GitHub Pages (static):** https://onnxscibroccoli.github.io/half-a-mile/
-- **Source:** https://github.com/onnxscibroccoli/half-a-mile
+- **Public site:** [https://half-a-mile.vercel.app](https://half-a-mile.vercel.app)
+- **GitHub Pages (static):** [https://onnxscibroccoli.github.io/half-a-mile/](https://onnxscibroccoli.github.io/half-a-mile/)
+- **Source:** [https://github.com/onnxscibroccoli/half-a-mile](https://github.com/onnxscibroccoli/half-a-mile)
 
-GitHub Pages is the `docs/` snapshot. If that URL 404s, enable Pages in the repo: **Settings → Pages → Source: GitHub Actions** (workflow is in `.github/workflows/pages.yml`), or **Deploy from a branch → `main` / `docs`**.
+The Vercel URL is the public production site. GitHub Pages is the same `docs/` snapshot; it publishes from `.github/workflows/pages.yml`.
 
 ## Pages
 
