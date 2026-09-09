@@ -6,11 +6,11 @@ The piece does not argue that every parent should make the same choice, or that 
 
 ## Live
 
-- **Public site:** [https://half-a-mile.vercel.app](https://half-a-mile.vercel.app)
-- **GitHub Pages (static):** [https://onnxscibroccoli.github.io/half-a-mile/](https://onnxscibroccoli.github.io/half-a-mile/)
+- **Public site (Vercel):** [https://half-a-mile.vercel.app](https://half-a-mile.vercel.app)
+- **GitHub Pages (static):** [https://onnxscibroccoli.github.io/](https://onnxscibroccoli.github.io/)
 - **Source:** [https://github.com/onnxscibroccoli/half-a-mile](https://github.com/onnxscibroccoli/half-a-mile)
 
-The Vercel URL is the public production site. GitHub Pages is the same `docs/` snapshot; it publishes from `.github/workflows/pages.yml`.
+Both public URLs serve the same `docs/` snapshot (essay, statutes, sources). Vercel is production; GitHub Pages is the static copy.
 
 ## Pages
 
