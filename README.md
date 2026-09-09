@@ -6,8 +6,11 @@ The piece does not argue that every parent should make the same choice, or that 
 
 ## Live
 
+- **Public site (Vercel):** linked after production deploy
 - **GitHub Pages (static):** https://onnxscibroccoli.github.io/half-a-mile/
 - **Source:** https://github.com/onnxscibroccoli/half-a-mile
+
+GitHub Pages is the `docs/` snapshot. If that URL 404s, enable Pages in the repo: **Settings → Pages → Source: GitHub Actions** (workflow is in `.github/workflows/pages.yml`), or **Deploy from a branch → `main` / `docs`**.
 
 ## Pages
 
@@ -19,13 +22,13 @@ The piece does not argue that every parent should make the same choice, or that 
 
 The app in `src/` is React 19 + TanStack Start + Tailwind CSS v4.
 
-The public static site in `docs/` is a snapshot of those pages (HTML/CSS/images) for GitHub Pages and any static host.
+The public static site in `docs/` is a snapshot of those pages (HTML/CSS/images) for Vercel and GitHub Pages.
 
 ```bash
 npm install
 npm run dev
 npm run build
-node scripts/build-static-pages.mjs   # writes docs/ from the running app
+npm run build:pages   # writes docs/ from the running app
 ```
 
 Not legal advice. Facts are drawn from public reporting and the published Code of Virginia.
