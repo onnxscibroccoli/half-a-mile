@@ -1,34 +1,53 @@
 # Half a Mile
 
-A sourced longform essay on the Virginia case of Karyann Parkinson, who was convicted after allowing her five-year-old son to walk half a mile to a neighborhood pond.
+**Status:** Published long-form web application / active editorial project  
+**Repository:** `onnxscibroccoli/half-a-mile`  
+**Documentation snapshot:** 2026-09-28 23:12 EDT
 
-The piece does not argue that every parent should make the same choice, or that Parkinson must win her appeal. It argues that Virginia’s 2023 independent-activity statute already says reasonable childhood independence is not, by itself, neglect — and that the appeal should be decided under that law.
+Half a Mile is a sourced long-form essay and publishing application concerning the Virginia case of Karyann Parkinson and the legal treatment of reasonable childhood independence.
 
-## Live
+## What it does
 
-- **Public site (Vercel):** [https://half-a-mile.vercel.app](https://half-a-mile.vercel.app)
-- **GitHub Pages (static):** [https://onnxscibroccoli.github.io/](https://onnxscibroccoli.github.io/)
-- **Source:** [https://github.com/onnxscibroccoli/half-a-mile](https://github.com/onnxscibroccoli/half-a-mile)
+The project publishes three primary surfaces: the essay, the cited law, and the supporting sources/record. The application combines editorial content with a React web application and a generated static publication.
 
-Both public URLs serve the same `docs/` snapshot (essay, statutes, sources). Vercel is production; GitHub Pages is the static copy.
+The project explicitly says it is not legal advice.
 
-## Pages
+## Repository map
 
-- **The essay** — the full argument, with numbered citations
-- **The law** — SB 1367, Va. Code §§ 63.2-100, 16.1-228, and 18.2-371
-- **Sources** — annotated bibliography (reporting, statutes, legislative history)
+Approximately 137 tracked files are present.
 
-## Stack
+- `src/` — React/TanStack application.
+- `src/components/` — article, citation, statute, preview, and site components.
+- `src/lib/` — application data, authentication, database, sources, statutes, readiness, and multiplayer code.
+- `scripts/` — build, browser smoke, auth invariant, migration, preview, PWA, and static-page tooling.
+- `docs/` — static published snapshot.
+- `public/` — web/PWA assets.
+- `migrations/` — authentication schema.
+- deployment configuration in `vercel.json` and Vite/TypeScript configuration.
 
-The app in `src/` is React 19 + TanStack Start + Tailwind CSS v4.
+## Development cycle
 
-The public static site in `docs/` is a snapshot of those pages (HTML/CSS/images) for Vercel and GitHub Pages.
+**PUBLISHED / ACTIVE MAINTENANCE.**
+
+Recent history documents a live Vercel deployment and a GitHub Pages static publication. Engineering work continues around publishing, browser behavior, authentication, and content.
+
+## Development
 
 ```bash
 npm install
 npm run dev
 npm run build
-npm run build:pages   # writes docs/ from the running app
+npm run build:pages
 ```
 
-Not legal advice. Facts are drawn from public reporting and the published Code of Virginia.
+`npm run build:pages` produces the static publication under `docs/`.
+
+## AI model instructions
+
+For editorial changes, read the source material before modifying claims. Preserve primary legal text and citations, distinguish reporting from argument, and never invent authorities.
+
+For engineering changes, inspect the relevant `src/` and `scripts/` files, run tests, and verify the generated static output when publication behavior changes.
+
+An AI should not silently alter the substance of the published essay while performing unrelated engineering work.
+
+**Bottom line:** a live, source-oriented publishing application with dynamic and static delivery.
