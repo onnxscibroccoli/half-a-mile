@@ -1,5 +1,8 @@
 # Half a Mile
 
+
+> **Project reviewer:** [Current evidence classification and ordered remediation](docs/PORTFOLIO_READINESS.md) · [tracking issue](https://github.com/onnxscibroccoli/half-a-mile/issues/1). No unsupported production or professional-experience claims.
+
 **Status:** Published long-form web application / active editorial project  
 **Repository:** `onnxscibroccoli/half-a-mile`  
 **Documentation snapshot:** 2026-09-28 23:12 EDT
